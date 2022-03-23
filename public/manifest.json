@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Instagram clone",
+  "name": "Instagram clone PWA",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +18,25 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "categories": ["lifestyle", "music"],
+  "description": "Esta es una pwa de prueba",
+  "dir": "ltr",
+  "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#6f75fc",
+  "lang": "es-ES",
+  "orientation": "portrait",
+  "prefer_related_applications": false,
+  "scope": "/",
+  "shortcuts" : [
+    {
+      "name": "Perfil",
+      "short-name": "Perfil",
+      "icon": "/logo192.png",
+      "url": "/profile/",
+      "description": "Profile of user"
+    }
+  ],
+  "start_url": "/"
 }

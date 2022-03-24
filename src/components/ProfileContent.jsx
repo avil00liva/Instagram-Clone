@@ -80,15 +80,15 @@ const ProfileContent = ({photoURL, username, iduser}) => {
           <span className='text-lg font-bold mb-6'>
               @{username?.split(" ").join("").toLocaleLowerCase()}
           </span>
-          <div className='min-h-[50px] w-full flex items-center justify-center gap-4 mb-6'>
-              <div className='min-w-[50px] min-h-[50px] flex flex-col items-center'>
+          <div className='min-h-[50px] w-full flex items-center justify-center mb-6'>
+              <div className='min-w-[50px] min-h-[50px] flex flex-col items-center mr-4'>
                 {personalPosts.length > 0 ? <strong className='text-lg font-bold'>{personalPosts.length}</strong>
                 : 
                 <strong className='text-lg font-bold'>0</strong>
               }
                 <p className='dark:text-gray-300'>Post</p>
               </div>
-              <div className='min-w-[50px] min-h-[50px] flex flex-col items-center'>
+              <div className='min-w-[50px] min-h-[50px] flex flex-col items-center mr-4'>
                 {followUser.length > 0 ? 
                   <strong className='text-lg font-bold'>{followUser.length}</strong>
                   :
@@ -121,7 +121,7 @@ const ProfileContent = ({photoURL, username, iduser}) => {
                 Siguiendo
               </button>
               :
-              <button className='mb-6 outline-none border bg-transparent dark:bg-gray-900 dark:text-white text-gray-900 border-gray-900 dark:border-gray-600 px-8 py-3 rounded-md font-bold' onClick={followUserAction}>
+              <button className='mb-6 outline-none border bg-transparent dark:bg-black dark:text-white text-gray-900 border-gray-900 dark:border-gray-600 px-8 py-3 rounded-md font-bold' onClick={followUserAction}>
                 Seguir
               </button> 
             }

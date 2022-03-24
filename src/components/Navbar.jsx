@@ -11,11 +11,11 @@ const Navbar = () => {
     <span className='flex items-center h-full cursor-pointer flex-[0.5] quini:flex-[0.3]'>
         <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="InstagramLogo" className={darkTheme ? "imgNegative" : ""} />
     </span>
-    <ul className='list-none flex gap-4'>
-        <li title="Añadir foto" className="cursor-pointer" onClick={showUploadPhotoMenu}>
+    <ul className='list-none flex'>
+        <li title="Añadir foto" className="cursor-pointer mr-4" onClick={showUploadPhotoMenu}>
           <CgAddR className='w-7 h-7 font-bold' />
         </li>
-        <li title="Notificaciones" className="cursor-pointer">
+        <li title="Notificaciones" className="cursor-pointer mr-4">
           <AiOutlineHeart className='w-7 h-7 font-bold' />
         </li>
         <li title="MD" className="cursor-pointer">

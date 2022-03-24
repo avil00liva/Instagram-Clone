@@ -176,7 +176,7 @@ const followUserAction = async ()=> {
 
 
 return (
-    <div className='m-auto mb-8 w-full max-w-[500px] min-h-[500px] bg-[#eee] dark:bg-gray-900 shadow-md rounded-lg relative dark:text-white'>
+    <div className='m-auto mb-8 w-full max-w-[500px] min-h-[500px] bg-[#eee] dark:bg-black shadow-md rounded-lg relative dark:text-white'>
         <div className='w-full min-h-[50px] border-b border-b-gray-600 flex items-center justify-between px-2 py-2 dark:border-b-gray-200'>
                 <div className='flex items-center h-full'>
                     <span className='w-10 h-10 border border-[#f20069] rounded-full overflow-hidden cursor-pointer'>

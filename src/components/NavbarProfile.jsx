@@ -11,8 +11,8 @@ const Navbar = ({username}) => {
     <span className='flex items-center h-full cursor-pointer flex-[0.5] quini:flex-[0.3] text-2xl font-bold dark:text-white'>
       {username?.split(" ").join("").toLocaleLowerCase()}
     </span>
-    <ul className='list-none flex gap-4 text-black dark:text-white'>
-        <li title="Añadir foto" className="cursor-pointer" onClick={showUploadPhotoMenu}>
+    <ul className='list-none flex text-black dark:text-white'>
+        <li title="Añadir foto" className="cursor-pointer mr-4" onClick={showUploadPhotoMenu}>
           <CgAddR className='w-7 h-7 font-bold' />
         </li>
         <li title="Notificaciones" className="cursor-pointer" onClick={showUserSetting}>

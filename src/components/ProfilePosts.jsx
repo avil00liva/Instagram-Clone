@@ -74,7 +74,7 @@ const ProfilePosts = ({iduser}) => {
                         </div> 
                     </div>
                         :
-                        <div className='w-full min-h-[500px] text-black dark:text-white bg-inherit dark:bg-gray-900 quini:bg-white flex flex-wrap py-4 justify-start items-start'>
+                        <div className='w-full min-h-[500px] text-black dark:text-white bg-inherit dark:bg-black quini:bg-white flex flex-wrap py-4 justify-start items-start'>
                             {posts.map((post, index)=>{
                                 return (
                                     <ProfilePostCard key={index} post={post} />
@@ -97,7 +97,7 @@ const ProfilePosts = ({iduser}) => {
                     </div>
                 </div>
                 :
-                <div className='w-full min-h-[500px] text-black dark:text-white bg-inherit dark:bg-gray-900 quini:bg-white flex flex-wrap py-4 justify-start items-start'>
+                <div className='w-full min-h-[500px] text-black dark:text-white bg-inherit dark:bg-black quini:bg-white flex flex-wrap py-4 justify-start items-start'>
                     {savedPosts.map((post, index)=>{
                         return (
                             <ProfilePostCard key={index} post={post} />

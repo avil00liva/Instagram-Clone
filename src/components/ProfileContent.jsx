@@ -73,7 +73,7 @@ const ProfileContent = ({photoURL, username, iduser}) => {
 
   return (
     <div className=''>
-    <div className='quini:hidden pt-4 w-full flex flex-col min-h-screen'>
+    <div className='pt-4 w-full flex flex-col min-h-screen'>
     <div className='w-full min-h-screen bg-[#ddd] dark:bg-black overflow-hidden'>
         <div className='min-h-[100px] mt-10 w-full border-b border-gray-900 dark:border-gray-600 flex flex-col items-center dark:text-white text-black'>
           <img src={photoURL} alt="Avatar User" className='w-[120px] h-[120px] rounded-full my-6'/>

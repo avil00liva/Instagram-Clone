@@ -24,7 +24,7 @@
   "display_override": ["fullscreen", "minimal-ui"],
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#6f75fc",
+  "background_color": "#000000",
   "lang": "es-ES",
   "orientation": "portrait",
   "prefer_related_applications": false,

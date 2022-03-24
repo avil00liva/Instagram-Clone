@@ -6,8 +6,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
 const firebaseConfig = {
     apiKey: "AIzaSyArOebVLf_PCuMzcYKCbcVEplre1M38M1o",
-    /*authDomain: "instagram-clone-8d995.firebaseapp.com",*/
-    authDomain: "instagram-clone-oliva.netlify.app",
+    authDomain: "instagram-clone-8d995.firebaseapp.com",
     projectId: "instagram-clone-8d995",
     storageBucket: "instagram-clone-8d995.appspot.com",
     messagingSenderId: "415177906886",

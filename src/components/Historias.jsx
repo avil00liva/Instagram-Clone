@@ -2,7 +2,7 @@ import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { BsPlusLg } from "react-icons/bs"
 import { usePosts } from '../context/PostsContext';
-import { auth, db } from '../firebase';
+import { db } from '../firebase';
 import AllFullStories from './AllFullStories';
 import HistoriaGlob from './HistoriaGlob';
 import StorieGlob from './StorieGlob';

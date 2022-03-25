@@ -12,6 +12,7 @@ import { auth, db } from '../firebase';
 import { usePosts } from '../context/PostsContext'
 import MenuPost from './MenuPost'
 import { Link } from 'react-router-dom'
+import TextContentPost from './TextContentPost'
 
 const PostCard = ({id, description, idDocUser, iduser, src, userImg, username}) => {
     const {isAuth, signInWithGoogle} = usePosts()
@@ -26,6 +27,11 @@ const PostCard = ({id, description, idDocUser, iduser, src, userImg, username}) 
     const [isFollowed, setIsFollowed] = useState(false)
     const [saved, setSaved] = useState(false)
     const [savesDoc, setSavesDoc] = useState([])
+    const [deployTextPost, setDeployTextPost] = useState(false)
+
+    const deployText = ()=>{
+        setDeployTextPost(true)
+    }
 
 
 
@@ -65,7 +71,6 @@ const PostCard = ({id, description, idDocUser, iduser, src, userImg, username}) 
     }
 
     /*********************************************************/
-
 
     /*************************LIKE POST***********************/
     useEffect(
@@ -268,20 +273,34 @@ return (
         </div>
         <div className='w-full min-h-[30px] bg-transparent px-2 pb-4'>
                 {likesDoc.length > 0 && <p className='font-bold'>{likesDoc.length} Likes</p>}
-                <p className='mb-2 text-gray-800 dark:text-gray-200'>
+                <p className='mb-2 text-gray-800 dark:text-gray-200 overflow-hidden text-ellipsis whitespace-pre'>
                     <span className='font-bold text-black dark:text-white'>{username} </span>
                     {description}
                 </p>
                 <p className='uppercase text-[#aaa] text-[10px] font-bold'>21 de Enero de 2022</p>
+                {Statecomments.length > 0 && <p className='mt-4 text-gray-500 dark:text-gray-300 text-[12px] font-bold underline w-fit' onClick={deployText}>Show comments</p>}
         </div>
         <div className='w-full min-h-[50px] p-2 flex flex-row gap-[5px]'>
-                <span className='text-[1.3rem] cursor-pointer transition-opacity duration-300 hover:opacity-80'>😊</span>
                 <input type="text" placeholder='Añade un comentario...' className='w-full outline-none border-0 border-transparent bg-transparent' value={content ? content : ""}  onChange={(e)=>{setContent(e.target.value)}} />
                 <button className='outline-none border-0 bg-transparent' onClick={sendComment}>
                     <FiSend className='w-7 h-7 dark:text-white'  />
                 </button>
         </div>
         <MenuPost setShowMenu={setShowMenu} showMenu={showMenu} id={id} iduser={iduser} />
+        <TextContentPost 
+            deployTextPost={deployTextPost} 
+            setDeployTextPost={setDeployTextPost}
+            description={description}
+            src={src}
+            userImg={userImg}
+            username={username}
+            stateComments={Statecomments}
+            content={content}
+            setContent={setContent}
+            sendComment={sendComment}
+            deleteComments={deleteComments}
+            postId={id}
+        />
     </div>
   )
 }

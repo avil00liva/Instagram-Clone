@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react'
 import { BiDotsVerticalRounded } from "react-icons/bi"
@@ -7,14 +6,14 @@ import { BsInbox, BsInboxFill } from "react-icons/bs"
 import { FaRegComment } from "react-icons/fa"
 import { FiSend } from "react-icons/fi"
 import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, serverTimestamp, setDoc } from 'firebase/firestore';
-import { collectionGroup, query, where } from 'firebase/firestore'
+import { query } from 'firebase/firestore'
 import { auth, db } from '../firebase';
 import { usePosts } from '../context/PostsContext'
 import MenuPost from './MenuPost'
 import { Link } from 'react-router-dom'
 import TextContentPost from './TextContentPost'
 
-const PostCard = ({id, description, idDocUser, iduser, src, userImg, username}) => {
+const PostCard = ({id, description, iduser, src, userImg, username}) => {
     const {isAuth, signInWithGoogle} = usePosts()
     const usuarioId = auth?.currentUser?.uid
     const [liked, setLiked] = useState([])
@@ -32,8 +31,6 @@ const PostCard = ({id, description, idDocUser, iduser, src, userImg, username}) 
     const deployText = ()=>{
         setDeployTextPost(true)
     }
-
-
 
     /************************SAVE POST***************************/
 

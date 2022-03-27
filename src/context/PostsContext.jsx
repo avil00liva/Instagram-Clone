@@ -31,7 +31,7 @@ export function PostsContext({children}) {
 
     useEffect( ()=>{
         const getPost = async ()=> { onSnapshot(
-          query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(10)),
+          query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(4)),
           (snapshot)=>{
             setPosts(snapshot.docs.map((doc)=> ({ ...doc.data(), id: doc.id})))
           }

@@ -58,8 +58,8 @@ const Notifications = () => {
     <>
     {isAuth
       ? 
-      <div className={notifications ? 'w-full min-h-screen bg-gray-900 inset-0 z-[180] overflow-y-auto text-white flex items-center flex-col fixed' : 'hidden'}>
-        <nav className='min-h-[30px] w-full flex mb-4 items-center justify-between p-2 py-3 fixed top-0 left-0 bg-gray-900 z-[21]'>
+      <div className={notifications ? 'w-full min-h-screen bg-black inset-0 z-[180] overflow-y-auto text-white flex items-center flex-col fixed' : 'hidden'}>
+        <nav className='min-h-[30px] w-full flex mb-4 items-center justify-between p-2 py-3 fixed top-0 left-0 bg-black z-[21]'>
           <span className='w-[30px] h-full rounded-full ml-1'>
               <img src={logo} alt="Logo App" className='w-full h-full rounded-full' />
           </span>

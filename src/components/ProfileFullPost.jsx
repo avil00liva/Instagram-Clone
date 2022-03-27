@@ -53,7 +53,7 @@ const ProfileFullPost = ({id, description,src, userImg, username, profileFullPos
                 <IoArrowBack className='mr-2 w-7 h-7' />
                 Posts
             </div>
-            <div className='m-auto pb-4 pt-2 mb-8 w-full max-w-[500px] min-h-[500px] h-full bg-[#eee] dark:bg-gray-900 shadow-md relative dark:text-white'>
+            <div className='m-auto pb-4 pt-2 mb-8 w-full max-w-[500px] min-h-[500px] h-full bg-[#eee] dark:bg-black shadow-md relative dark:text-white'>
                 <div className='w-full min-h-[50px] flex items-center justify-between px-2 py-2'>
                     <div className='flex items-center h-full'>
                         <span className='w-10 h-10 border border-[#f20069] rounded-full overflow-hidden cursor-pointer'>

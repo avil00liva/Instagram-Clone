@@ -27,6 +27,8 @@ export function PostsContext({children}) {
     const [followUser, setFollowUser] = useState([])
     const [profileFullPost, setProfileFullPost] = useState(false)
     const [uploadStoriesMenu, setUploadStoriesMenu] = useState(false)
+    const [notifications, setNotifications] = useState(false)
+
     
 
     useEffect( ()=>{
@@ -123,6 +125,9 @@ function signInWithGoogle () {
     const showUserSetting = () => {
       setUserSettings(true)
     }
+    const showNotifications = () => {
+      setNotifications(true)
+    }
     /***********************************/
 
     /*****************SEARCH FILTER*******************/
@@ -194,7 +199,10 @@ function signInWithGoogle () {
             setUploadStoriesMenu,
             explorePosts,
             filterPosts,
-            handleFilter
+            handleFilter,
+            notifications,
+            setNotifications,
+            showNotifications
         }}>
             {children}
         </postsContext.Provider>

@@ -12,6 +12,7 @@ import LoginWUserPass from "./components/LoginWUserPass"
 import Explore from "./components/Explore"
 import Rell from "./components/Rell"
 import Tags from "./components/Tags"
+import Notifications from "./components/Notifications"
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
         </Router>
         <UploadPhoto />
         <EditUsernameModal />
+        <Notifications />
         <UserSettings />
         <LoginWUserPass />
     </div>

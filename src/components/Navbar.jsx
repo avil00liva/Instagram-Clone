@@ -7,7 +7,7 @@ import { usePosts } from '../context/PostsContext';
 const Navbar = () => {
   const { showUploadPhotoMenu, darkTheme } = usePosts()
 
-  return <nav className='z-10 w-full h-10 bg-[#ddd] dark:bg-black border-b dark:border-b-gray-200 border-b-gray-600 px-2 flex justify-between items-center fixed top-0 left-0 dark:text-white'>
+  return <nav className='z-10 w-full h-11 bg-[#ddd] dark:bg-black border-b dark:border-b-gray-200 border-b-gray-600 px-2 flex justify-between items-center fixed top-0 left-0 dark:text-white'>
     <span className='flex items-center h-full cursor-pointer flex-[0.5] quini:flex-[0.3]'>
         <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="InstagramLogo" className={darkTheme ? "imgNegative" : ""} />
     </span>

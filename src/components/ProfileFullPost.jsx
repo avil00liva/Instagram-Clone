@@ -48,7 +48,7 @@ const ProfileFullPost = ({id, description,src, userImg, username, profileFullPos
   return (
     <>
     {profileFullPost &&
-        <div className='w-full min-h-screen overflow-y-auto bg-[#ddd] fixed inset-0 z-50'>
+        <div className='w-full min-h-screen overflow-y-auto bg-[#ddd] dark:bg-black fixed inset-0 z-50'>
             <div onClick={()=>setProfileFullPost(false)} className="w-full bg-inherit dark:bg-black uppercase flex text-2xl items-center font-bold py-4 border-b border-b-gray-800 dark:border-b-gray-200 px-2">
                 <IoArrowBack className='mr-2 w-7 h-7' />
                 Posts

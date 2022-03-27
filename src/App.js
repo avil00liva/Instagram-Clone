@@ -11,6 +11,7 @@ import UserSettings from "./components/UserSettings"
 import LoginWUserPass from "./components/LoginWUserPass"
 import Explore from "./components/Explore"
 import Rell from "./components/Rell"
+import Tags from "./components/Tags"
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route exact path={`/profile/:iduser`} element={<Profile />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path={`/explore/tags/:tags`} element={<Tags />} />
             <Route path="/rell" element={<Rell />} />
           </Routes>
           <NavbarBottom />

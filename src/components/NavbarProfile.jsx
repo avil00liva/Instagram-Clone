@@ -7,7 +7,7 @@ const Navbar = ({username}) => {
   const { showUploadPhotoMenu, showUserSetting } = usePosts()
 
 
-  return <nav className='z-10 w-full text-black dark:text-white h-10 bg-[#ddd] dark:bg-black dark:border-b-gray-200 border-b border-b-gray-600 px-2 flex justify-between items-center fixed top-0 left-0'>
+  return <nav className='z-10 w-full text-black dark:text-white h-11 bg-[#ddd] dark:bg-black dark:border-b-gray-200 border-b border-b-gray-600 px-2 flex justify-between items-center fixed top-0 left-0'>
     <span className='flex items-center h-full cursor-pointer flex-[0.5] quini:flex-[0.3] text-2xl font-bold dark:text-white'>
       {username?.split(" ").join("").toLocaleLowerCase()}
     </span>

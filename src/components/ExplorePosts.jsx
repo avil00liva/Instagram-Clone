@@ -6,7 +6,7 @@ const ExplorePosts = () => {
     const { explorePosts, filterPosts } = usePosts()
 
   return (
-  <div className='w-full h-auto bg-inherit flex flex-wrap justify-start items-center'>
+  <div className='pb-16 w-full h-auto bg-inherit flex flex-wrap justify-start items-center'>
         {filterPosts.length === 0 ?  
             <>      
             {explorePosts.map((post, index)=>{

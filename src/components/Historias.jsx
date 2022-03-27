@@ -27,7 +27,7 @@ const Historias = () => {
   return (
       <>
     {isAuth && 
-        <div className='mt-10 min-w-full min-h-[80px] border-b border-b-gray-600 flex items-center px-2 overflow-x-auto overflow-y-hidden bg-[#ddd] dark:bg-black'>
+        <div className='mt-11 min-w-full min-h-[80px] border-b border-b-gray-600 flex items-center px-2 overflow-x-auto overflow-y-hidden bg-[#ddd] dark:bg-black'>
             <div className='w-full min-h-[80px] bg-transparent top-0 left-0 overflow-x-scroll overflow-y-hidden flex items-center pr-2'>
                 <div className='min-w-[60px] max-w-[60px] min-h-[60px] max-h-[60px] border-2 border-[#f20069] border-dashed rounded-full cursor-pointer transition-opacity duration-200 overflow-hidden relative hover:opacity-60 first:ml-2 flex justify-center items-center mr-4' onClick={()=>{setUploadStoriesMenu(true)}}>
                     <BsPlusLg className='w-7 h-7 dark:text-white' />

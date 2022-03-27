@@ -11,6 +11,7 @@ const UploadPhoto = () => {
     const { setUploadPhMenu, uploadPhMenu, usuario } = usePosts()
     const filePickerRef = useRef(null)
     const [description, setDescription] = useState("")
+    const [tags, setTags] = useState("")
     const [selectedFile, setSelectedFile]=useState(null)
     const [loading, setLoading]= useState(false)
 
@@ -26,6 +27,7 @@ const UploadPhoto = () => {
             username: auth.currentUser.displayName.split(" ").join("").toLocaleLowerCase(),
             userImg: auth.currentUser.photoURL,
             description: description,
+            tags: tags,
             timestamp: serverTimestamp()
         })
         const imageRef = ref(storage, `posts/${docRef.id}/image`)
@@ -57,6 +59,7 @@ const UploadPhoto = () => {
     const closeModal = ()=>{
         setUploadPhMenu(false)
         setDescription("")
+        setTags("")
         setSelectedFile(null)
     }
     
@@ -72,8 +75,9 @@ const UploadPhoto = () => {
                     <AiOutlineArrowRight className='w-7 h-7 font-bold' onClick={sendAuthPost} />
                 </div>
                 <div className='pt-4 pb-6 w-full min-h-screen px-4 bg-[#ddd] dark:bg-black'>
-                    <input type="text" className='outline-none border border-transparent py-4 indent-1 w-full rounded-lg mb-4 text-gray-800' placeholder='Post description' onChange={(e)=>{setDescription(e.target.value)}} />
-                    <div className='addTiktokInput mb-8 flex items-center justify-between' onClick={()=> filePickerRef.current.click()}>
+                    <textarea type="text" className='outline-none border border-transparent py-4 indent-1 w-full rounded-lg mb-4 text-gray-800' placeholder='Post description' onChange={(e)=>{setDescription(e.target.value)}} />
+                    <input type="text" className='outline-none border border-transparent py-4 indent-1 w-full rounded-lg mb-4 text-gray-800' placeholder='Post tags' onChange={(e)=>{setTags(e.target.value)}} />
+                    <div className='w-fit mb-8 flex items-center justify-between' onClick={()=> filePickerRef.current.click()}>
                         <AiOutlineVideoCameraAdd className='text-5xl text-gray-900 dark:text-white' />
                         <input type="file" hidden onChange={addImageToPost} ref={filePickerRef} />
                         {loading && <div className='w-[50px] h-[50px] border-4 border-pink-700 border-l-transparent m-auto rounded-full animate-spin' />}

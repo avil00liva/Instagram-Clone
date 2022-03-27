@@ -13,7 +13,7 @@ import MenuPost from './MenuPost'
 import { Link } from 'react-router-dom'
 import TextContentPost from './TextContentPost'
 
-const PostCard = ({id, description, iduser, src, userImg, username}) => {
+const PostCard = ({id, description, iduser, src, userImg, username, tags}) => {
     const {isAuth, signInWithGoogle} = usePosts()
     const usuarioId = auth?.currentUser?.uid
     const [liked, setLiked] = useState([])
@@ -248,7 +248,7 @@ return (
                         }
                     </span>
                     <span className='mr-[9px] cursor-pointer'>
-                        <FaRegComment className="w-6 h-6 font-bold cursor-pointer" />
+                        <FaRegComment className="w-6 h-6 font-bold" onClick={deployText} />
                     </span>
                     <span className='mr-[5px] cursor-pointer'>
                         <FiSend className="w-6 h-6 font-bold cursor-pointer" />
@@ -270,7 +270,7 @@ return (
         </div>
         <div className='w-full min-h-[30px] bg-transparent px-2 pb-4'>
                 {likesDoc.length > 0 && <p className='font-bold'>{likesDoc.length} Likes</p>}
-                <p className='mb-2 text-gray-800 dark:text-gray-200 overflow-hidden text-ellipsis whitespace-pre'>
+                <p className='mb-2 text-gray-800 dark:text-gray-200 overflow-hidden text-ellipsis whitespace-nowrap'>
                     <span className='font-bold text-black dark:text-white'>{username} </span>
                     {description}
                 </p>
@@ -297,6 +297,7 @@ return (
             sendComment={sendComment}
             deleteComments={deleteComments}
             postId={id}
+            tags={tags}
         />
     </div>
   )

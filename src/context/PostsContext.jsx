@@ -31,7 +31,7 @@ export function PostsContext({children}) {
 
     useEffect( ()=>{
         const getPost = async ()=> { onSnapshot(
-          query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(4)),
+          query(collection(db, "posts"), orderBy("timestamp", "desc"), limit(10)),
           (snapshot)=>{
             setPosts(snapshot.docs.map((doc)=> ({ ...doc.data(), id: doc.id})))
           }
@@ -142,7 +142,8 @@ function signInWithGoogle () {
           return (
             item.username.toLowerCase().includes(searchWord.toLowerCase()) ||
             item.iduser.toLowerCase().includes(searchWord.toLowerCase()) ||
-            item.description.toLowerCase().includes(searchWord.toLowerCase())
+            item.description.toLowerCase().includes(searchWord.toLowerCase()) ||
+            item.tags.toLowerCase().includes(searchWord.toLowerCase())
           )
       })
       if(searchWord === ""){

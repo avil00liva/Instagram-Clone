@@ -3,14 +3,16 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
+const apiKey = process.env.REACT_APP_FIREBASE_APIKEY;
+const appId = process.env.REACT_APP_FIREBASE_APPID;
 
 const firebaseConfig = {
-    apiKey: "AIzaSyArOebVLf_PCuMzcYKCbcVEplre1M38M1o",
+    apiKey: apiKey,
     authDomain: "instagram-clone-8d995.firebaseapp.com",
     projectId: "instagram-clone-8d995",
     storageBucket: "instagram-clone-8d995.appspot.com",
     messagingSenderId: "415177906886",
-    appId: "1:415177906886:web:15277cecb111f0e91d55c7" 
+    appId: appId
   };
 
 

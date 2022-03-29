@@ -3,6 +3,7 @@ import { CgAddR } from "react-icons/cg"
 import { AiOutlineHeart } from "react-icons/ai"
 import { FiSend } from "react-icons/fi"
 import { usePosts } from '../context/PostsContext';
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const { showUploadPhotoMenu, darkTheme, showNotifications }= usePosts()
@@ -19,7 +20,9 @@ const Navbar = () => {
           <AiOutlineHeart className='w-7 h-7 font-bold' />
         </li>
         <li title="MD" className="cursor-pointer">
-          <FiSend className='w-7 h-7 font-bold' />
+          <Link to={`/direct/inbox`}>
+            <FiSend className='w-7 h-7 font-bold' />
+          </Link>
         </li>
     </ul>
   </nav>;
